@@ -70,9 +70,11 @@ const TopPlay = () => {
                 key={song?.key}
                 style={{width:'10%', height:'auto' }} 
                 className="shadow-lg rounded-full animate-slideright">
-                  
-            </SwiperSlide>
-            
+                <Link to={`/artists/${song?.artists[0].adamid}`}>
+                    <img src={song?.images.background} alt="name" 
+                    className="rounded-full w-full object-cover"  />          
+                </Link>
+            </SwiperSlide> 
           )
             )}</Swiper>
       </div>
