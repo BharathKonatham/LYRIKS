@@ -15,15 +15,11 @@ const AroundYou = () =>{
     if(isFetching && loading) return <Loader title="Loading songs around you" />
     if(error && country) return <Error />
     
-        axios.get('https://geo.ipify.org/api/v2/country?apiKey=at_rX5PHhHHkkFELDuUbVxWDiJGdC5Ke')
-        .then((res)=>setCountry(res?.data?.location?.country))
-        .catch((err)=>console.log(err))
-        .finally(()=>setLoading(false))
     console.log(country)
     return (
         <div className="flex flex-col">
             <h2 className="font-bold text-3xl text-white text-left">
-                Around You 
+                Around You US
                 {country}
             </h2>
            <div className="flex flex-wrap sm:justify-start justify-center gap-8">
